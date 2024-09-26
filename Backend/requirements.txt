@@ -1,0 +1,7 @@
+Read this https://medium.com/@alex.ginsberg/beginners-guide-to-the-spotify-web-api-bade6aa2d47c
+-- Passport.js and Passport-Spotify for Spotify authentication
+
+My use cases:
+
+- Get the general playlists for a user
+    * 
