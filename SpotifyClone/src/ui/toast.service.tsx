@@ -1,5 +1,6 @@
 import Toast from 'react-native-toast-message';
 
+// Set of function to use hooks
 const showToast = {
   success(message: string, title: string = 'Success') {
     Toast.show({

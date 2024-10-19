@@ -1,6 +1,7 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 import {musicService} from '../../../api/services/music.service';
 
+// Get all top artists
 export const fetchTopArtists = createAsyncThunk(
   'music/fetchTopArtists',
   async (_, {rejectWithValue}) => {
@@ -13,6 +14,7 @@ export const fetchTopArtists = createAsyncThunk(
   },
 );
 
+// Get top tracks
 export const fetchTopTracks = createAsyncThunk(
   'music/fetchTopTracks',
   async (_, {rejectWithValue}) => {
@@ -27,6 +29,7 @@ export const fetchTopTracks = createAsyncThunk(
   },
 );
 
+// Search based on a query
 export const searchTracks = createAsyncThunk(
   'music/searchTracks',
   async (query: string, {rejectWithValue}) => {

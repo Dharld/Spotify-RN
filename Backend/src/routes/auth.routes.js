@@ -9,7 +9,7 @@ router.post("/logout", firebaseAuthController.logoutUser);
 router.post("/reset-password", firebaseAuthController.resetPassword);
 router.post(
   "/resend-verification-email",
-  firebaseAuthController.resendVerificationEmail
+  firebaseAuthController.sendEmail
 );
 
 module.exports = router;

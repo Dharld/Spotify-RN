@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import {Platform} from 'react-native';
 
-let BASE_URL = 'http://localhost:5000/api/'; // Replace with your API base URL
+let BASE_URL = 'http://localhost:5000/api/'; // Base URL
 
 if (Platform.OS === 'android') {
   BASE_URL = 'http://10.0.2.2:5000/api';
@@ -15,6 +15,7 @@ if (Platform.OS === 'android') {
   BASE_URL = 'http://192.168.1.X:5000/api';
 }
 
+// Used for the different HTTP request
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
   headers: {
@@ -26,7 +27,7 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   async config => {
     const token = await AsyncStorage.getItem('authToken');
-    console.log(token);
+    // If a token is attached, we'll bind it to the headers
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

@@ -9,13 +9,13 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import styles from './home.styles';
-import TopTracks from './components/top-tracks.component';
+import TopTracks from './components/TopTracks.component';
 
-/* interface RecentlyPlayedItemProps {
+interface RecentlyPlayedItemProps {
   imageUrl: string;
   title: string;
 }
- */
+
 /* const RecentlyPlayedItem: React.FC<RecentlyPlayedItemProps> = ({
   imageUrl,
   title,
@@ -44,7 +44,7 @@ const PlaylistItem: React.FC<PlaylistItemProps> = ({
   </TouchableOpacity>
 ); */
 
-export default function SpotifyHome() {
+export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <TopTracks />

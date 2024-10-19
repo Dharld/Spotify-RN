@@ -7,6 +7,7 @@ import SignupScreen from './src/screens/signup/signup.screen';
 import HomeScreen from './src/screens/home/home.screen';
 import {useSelector} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
+import MainTabs from './src/components/NavigationBar.component';
 
 const Stack = createStackNavigator();
 
@@ -20,7 +21,7 @@ const AuthStack = () => (
 
 const MainStack = () => (
   <Stack.Navigator id="MainStack" screenOptions={{headerShown: false}}>
-    <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Screen name="Tabs" component={MainTabs} />
   </Stack.Navigator>
 );
 

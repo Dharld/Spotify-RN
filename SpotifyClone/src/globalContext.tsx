@@ -5,11 +5,13 @@ interface AppContextType {
   toggleTheme: () => void;
 }
 
+// Global application context
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{children: ReactNode}> = ({children}) => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
+  // Function to switch theme
   const toggleTheme = () => {
     setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
   };
@@ -21,6 +23,7 @@ export const AppProvider: React.FC<{children: ReactNode}> = ({children}) => {
   );
 };
 
+// Hook for using the theme
 export const useAppContext = () => {
   const context = useContext(AppContext);
   if (context === undefined) {

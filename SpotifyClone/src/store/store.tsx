@@ -2,6 +2,7 @@ import {configureStore} from '@reduxjs/toolkit';
 import authReducer from './slices/auth/auth.slice';
 import musicReducer from './slices/music/music.slice';
 
+// Global store
 export const store = configureStore({
   reducer: {
     auth: authReducer,
